@@ -4,6 +4,82 @@
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
 <body> 
  <style>  
+  .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+</style>
+</head>
+<body>
+
+<h2>Clickable Dropdown</h2>
+<p>Click on the button to open the dropdown menu.</p>
+
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
   body{-webkit-transform: scale(0.67);-moz-transform: scale(0.67);transform: scale(0.67);}
  body {page-borders:"thick" canvas-style: "normal" header-subtitle:"address" banner-alignment:"center" height:100%;width:100%;background-image:url(8.gif);background-repeat:no-repeat;background-size:cover;}
   img {border-radius: 50%;}
@@ -26,25 +102,7 @@
  
   <a href="https://www.linkedin.com/in/bryan-schonhaut-188941109/" target="_blank"><img src="linkedin-logo.png" border="0" alt="LinkedIn"></a>&nbsp;&nbsp;&nbsp;
  <a href=https://www.facebook.com/bryan.schonhaut.75 target="_blank"><img src="400723469_4b4c6767c9.gif" border="0" alt="Facebook"></a>&nbsp;&nbsp;&nbsp;
- <div id="header_area" class="full_width">
-<div class="page">
-<ul class="menu">
-<li class="tab tab-home"><a href="http://https://crypticalraisen.github.io/Website//">Home</a></li>
-<li class="tab tab-1"><a href="http://https://crypticalraisen.github.io/Website//about-me/" title="About Me">About</a></li>
-<li class="tab tab-2 current"><a href="https://crypticalraisen.github.io/Website//contact/" title="Get In Touch">Contact</a></li>
-</ul>
-<div id="header">
-</div>
-</div>
-</div>
-<div id="content_area" class="full_width">
-<div class="page">
-<div id="content_box">
-<div id="content">
-<div class="post_box top" id="post-32">
-<div class="headline_area">
- 
-   
+  
           
   
   <!-- You should go to Dave Raggett's page for help starting your webpage!!!-->
