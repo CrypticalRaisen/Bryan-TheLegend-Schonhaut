@@ -19,9 +19,20 @@
     p.ex1 {color: #33cc33 ; text-align: left; font-family: Times New Roman; font-size: 50px; margin: 1cm 2cm;}
     p.ex2 {color: #1f7a1f ; text-align: left; font-family: Times New Roman; font-size: 50px; margin: 1cm 2cm;}
     p.ex3 {color: #0f3d0f ; text-align: left; font-family: Times New Roman; font-size: 50px; margin: 1cm 2cm;}
+    <script type="text/javascript">
+            var picPaths = ['download (1).png','download (2).png','download.png','hsk.gif','pic5.jpg'];
+            var curPic = -1;
+            //preload the images for smooth animation
+            var imgO = new Array();
+            for(i=0; i < picPaths.length; i++) {imgO[i] = new Image();imgO[i].src = picPaths[i] function swapImage() {curPic = (++curPic > picPaths.length-1)? 0 : curPic; imgCont.src = imgO[curPic].src;setTimeout(swapImage,2000);}
+            window.onload=function() {imgCont = document.getElementById('imgBanner');swapImage();}
+        </script>
  </style>
  </head>
- <body> 
+ <body>
+ <div>
+<img id="imgBanner" src="" alt="" />
+</div>
     <ul>
  <li><a class="active" href="http://www.homedepot.com/">Home</a></li>
   <li><a href="https://www.washingtonpost.com/regional/?cache=false">News</a></li>
@@ -52,6 +63,6 @@
       </tr>
   </table>
   <a href="https://validator.w3.org/check?uri=https://crypticalraisen.github.io/ComputerSciencesForTheWin"><img
-     src="http://www.w3.org/Icons/valid-html40" alt="Valid HTML 4.0 Transitional" height="31" width="88"></a> 
+     src="http://www.w3.org/Icons/valid-html40" alt="Valid HTML 4.0 Transitional" height="31" width="88"></a>
 </body>
 
