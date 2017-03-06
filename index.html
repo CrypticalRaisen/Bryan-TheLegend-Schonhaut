@@ -20,11 +20,10 @@
     p.ex2 {color: #1f7a1f ; text-align: left; font-family: Times New Roman; font-size: 50px; margin: 1cm 2cm;}
     p.ex3 {color: #0f3d0f ; text-align: left; font-family: Times New Roman; font-size: 50px; margin: 1cm 2cm;}
     <script type="text/javascript">
-            var picPaths = ['download (1).png','download (2).png','download.png','hsk.gif','pic5.jpg'];
-            var curPic = -1;
+            var picPaths = ['download (1).png','download (2).png','download.png','hsk.gif','pic5.jpg']; var curPic = -1;
             //preload the images for smooth animation
             var imgO = new Array();
-            for(i=0; i < picPaths.length; i++) {imgO[i] = new Image();imgO[i].src = picPaths[i] function swapImage() {curPic = (++curPic > picPaths.length-1)? 0 : curPic; imgCont.src = imgO[curPic].src;setTimeout(swapImage,2000);}
+            for(i=0; i < picPaths.length; i++) {imgO[i] = new Image();imgO[i].src = picPaths[i] function swapImage()} {curPic = (++curPic > picPaths.length-1)? 0 : curPic; imgCont.src = imgO[curPic].src;setTimeout(swapImage,2000);}
             window.onload=function() {imgCont = document.getElementById('imgBanner');swapImage();}
         </script>
  </style>
