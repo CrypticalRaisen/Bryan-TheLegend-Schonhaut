@@ -1,4 +1,4 @@
-<?php
+<php>
 if(isset($_POST['email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
@@ -84,7 +84,4 @@ $headers = 'From: '.$email_from."\r\n".
  
 Thank you for contacting us. We will be in touch with you very soon.
  
-<?php
- 
-}
-?>
+<php}>
